@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class PlayerControllerRigidbody : MonoBehaviour {
 
-	public float speed;
+	public float moveSpeed;
+	public float turnSpeed;
 
 	private Rigidbody rb;
 	// Use this for initialization
@@ -17,13 +18,9 @@ public class PlayerControllerRigidbody : MonoBehaviour {
 		float moveVertical = Input.GetAxis("Vertical");
 
 		Vector3 movement = new Vector3 (moveHorizontal, 0.0f, moveVertical);
-		rb.velocity = movement * speed;
-		rb.rotation = Quaternion.Angle(transform.rotation, Quaternion.LookRotation (movement));
-
-	}
-
-	// Update is called once per frame
-	void Update () {
-		
+		if (movement != Vector3.zero) {
+			rb.MoveRotation (Quaternion.Slerp (new Quaternion (0.0f, transform.rotation.y, 0.0f, transform.rotation.w), Quaternion.LookRotation (movement), Time.deltaTime * turnSpeed));
+		}
+		rb.velocity = movement * moveSpeed;
 	}
 }
