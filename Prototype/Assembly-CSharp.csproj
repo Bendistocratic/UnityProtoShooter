@@ -52,7 +52,7 @@
      <Compile Include="Assets\Scripts\PlayerControllerRigidbody.cs" />
      <Compile Include="Assets\Scripts\PlayerFire.cs" />
      <Compile Include="Assets\Scripts\Wave1Spawner.cs" />
-     <Compile Include="Assets\Scripts\ZombieMovement.cs" />
+     <Compile Include="Assets\Scripts\ZombieStats.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>E:/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
