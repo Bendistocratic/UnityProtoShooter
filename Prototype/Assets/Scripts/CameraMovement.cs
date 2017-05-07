@@ -14,6 +14,7 @@ public class CameraMovement : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		this.transform.position = player.transform.position + offset;
+		if (player != null)
+			this.transform.position = player.transform.position + offset;
 	}
 }

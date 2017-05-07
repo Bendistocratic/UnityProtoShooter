@@ -16,7 +16,6 @@ public class Wave1Spawner : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		if (counter <= 0.0f) {
-			Debug.Log (this.transform.position);
 			Instantiate (zombie, this.transform.position, Quaternion.identity);
 			counter = 5.0f;
 		} else {

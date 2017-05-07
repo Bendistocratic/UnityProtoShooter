@@ -49,8 +49,10 @@
      <Compile Include="Assets\Scripts\BulletStats.cs" />
      <Compile Include="Assets\Scripts\CameraMovement.cs" />
      <Compile Include="Assets\Scripts\GameManager.cs" />
+     <Compile Include="Assets\Scripts\ParticleStats.cs" />
      <Compile Include="Assets\Scripts\PlayerControllerRigidbody.cs" />
      <Compile Include="Assets\Scripts\PlayerFire.cs" />
+     <Compile Include="Assets\Scripts\PlayerStats.cs" />
      <Compile Include="Assets\Scripts\Wave1Spawner.cs" />
      <Compile Include="Assets\Scripts\ZombieStats.cs" />
  <Reference Include="UnityEngine.UI">

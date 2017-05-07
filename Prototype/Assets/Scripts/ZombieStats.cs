@@ -5,6 +5,8 @@ using UnityEngine.AI;
 
 public class ZombieStats : MonoBehaviour {
 
+	public ParticleSystem ps;
+
 	private GameObject player;
 	private NavMeshAgent nma;
 	private Vector3 dest;
@@ -18,9 +20,17 @@ public class ZombieStats : MonoBehaviour {
 
 	// Update is called once per frame
 	void Update () {
-		if (Vector3.Distance (dest, player.transform.position) > 1.0f) {
+		if (player != null && Vector3.Distance (dest, player.transform.position) > 1.0f) {
 			nma.destination = player.transform.position;
 			dest = player.transform.position;
+		}
+	}
+
+	void OnCollisionEnter(Collision col) {
+		if (col.gameObject.tag == "bullet") {
+			Instantiate (ps, this.transform.position, this.transform.rotation);
+			Destroy (col.gameObject);
+			Destroy (this.gameObject);
 		}
 	}
 }

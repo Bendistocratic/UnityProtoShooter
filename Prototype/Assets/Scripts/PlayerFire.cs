@@ -20,9 +20,9 @@ public class PlayerFire : MonoBehaviour {
 			Rigidbody rbBullet = theBullet.GetComponent<Rigidbody> ();
 			Vector3 bDir = new Vector3 (this.transform.position.x, 0.0f, this.transform.position.z);
 			rbBullet.AddForce (this.transform.forward * 1000.0f);
-			cooldown = 0.5f;
+			cooldown = 0.3f;
 		} else {
-			cooldown -= 0.5f * Time.deltaTime;
+			cooldown -= Time.deltaTime;
 		}
 	}
 }

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BulletStats : MonoBehaviour {
 
-	private float timeLimit = 5.0f;
+	private float timeLimit = 2.0f;
 
 	// Use this for initialization
 	void Start () {
@@ -17,5 +17,11 @@ public class BulletStats : MonoBehaviour {
 			Destroy (this.gameObject);
 		else
 			timeLimit -= Time.deltaTime;
+	}
+
+	void OnCollisionEnter (Collision col) {
+		if (col.gameObject.tag == "wall") {
+			Destroy (this.gameObject);
+		}
 	}
 }
