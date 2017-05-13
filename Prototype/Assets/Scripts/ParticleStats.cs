@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ParticleStats : MonoBehaviour {
 
-	private float timer = 0.5f;
+	private float timer = 1.0f;
 
 	// Use this for initialization
 	void Start () {

@@ -55,6 +55,7 @@
      <Compile Include="Assets\Scripts\PlayerStats.cs" />
      <Compile Include="Assets\Scripts\Wave1Spawner.cs" />
      <Compile Include="Assets\Scripts\ZombieStats.cs" />
+     <Compile Include="Assets\Scripts\zombieDeath.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>E:/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

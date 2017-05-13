@@ -6,6 +6,7 @@ using UnityEngine.AI;
 public class ZombieStats : MonoBehaviour {
 
 	public ParticleSystem ps;
+	public GameObject dsgo;
 
 	private GameObject player;
 	private NavMeshAgent nma;
@@ -28,6 +29,7 @@ public class ZombieStats : MonoBehaviour {
 
 	void OnCollisionEnter(Collision col) {
 		if (col.gameObject.tag == "bullet") {
+			Instantiate (dsgo, this.transform.position, this.transform.rotation);
 			Instantiate (ps, this.transform.position, this.transform.rotation);
 			Destroy (col.gameObject);
 			Destroy (this.gameObject);
